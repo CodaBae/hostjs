@@ -270,24 +270,7 @@ $(document).ready(function(){
 		$(".forex-box .second .favourites").show();
 	});
 
-	$(".forex-box .second table tr").on("click", function(){
-		var numberOfInstrument = $(".dash-navbar .stock .stock-box").length;
 
-		if(numberOfInstrument < 4){
-			var index = $(".forex-box .second table tr").index(this);
-			var eq = index - 1;
-			var instrument = $(".instrument-box .instrument").eq(eq).text();
-
-			// Prepend instrument
-			$(".dash-navbar .stock .dash-row").prepend("<div class=\"stock-box\"><span class=\"name\">Stock</span><span class=\"currency\">" + instrument + "</span><span class=\"close\">x</span></div>");
-		}
-
-	});
-
-	$(".dash-navbar .stock").on("click", ".stock-box span.close", function(){
-		var index = $(".dash-navbar .stock .stock-box span.close").index(this);
-		$(".dash-navbar .stock .stock-box").eq(index).remove();
-	});
 
 	// setTimeout(function() {
 	// 	setAdvanceChartWidget();
