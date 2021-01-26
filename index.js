@@ -9,7 +9,7 @@ $(document).ready(function(){
 	function hideAllSections(){
 		$(".buy-option").hide();
 		$(".sell-option").hide();
-		$(".real-account-box").hide(); 
+		$(".real-account-box").hide();
 		$(".notification-box").hide();
 		$(".forex-box").hide();
 	}
