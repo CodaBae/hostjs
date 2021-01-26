@@ -2,7 +2,6 @@ $(document).ready(function () {
   // Get navbar height
   var navbarHeight = $(".dash-navbar").outerHeight();
   $(".dash-contents .sidebar").css("paddingTop", navbarHeight);
-  $(".dash-contents .details").css("paddingTop", navbarHeight);
   $(".dash-contents .market").css("paddingTop", navbarHeight);
 
   function hideAllSections() {
@@ -151,8 +150,15 @@ $(document).ready(function () {
     hideSection(".notification-box");
   });
 
- 
+  // Show forex box
+  $("#add-to-group").on("click", function () {
+    showSection(".forex-box");
+  });
 
+  // Hide forex box
+  $(".forex-box span.close").on("click", function () {
+    hideSection(".forex-box");
+  });
 
   $(".dash-contents .trade .trade-action .trade-amount .trade-amount-add").on(
     "click",
